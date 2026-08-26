@@ -1,0 +1,126 @@
+project:
+  name: microns20_model
+  random_seed: 42
+
+cave:
+  datastack: minnie65_public
+  materialization_version: 1822
+  skeleton_version: 4
+  desired_resolution_um: [1000, 1000, 1000]
+  tables:
+    manual_coregistration: coregistration_manual_v4
+    functional_area: nucleus_functional_area_assignment
+    proofreading: proofreading_status_and_strategy
+    cell_types: aibs_metamodel_celltypes_v661
+    cell_type_corrections: aibs_metamodel_celltypes_v661_corrections
+    mtypes: aibs_metamodel_mtypes_v661_v2
+    mtype_corrections: aibs_metamodel_mtypes_v661_v2_corrections
+    comparison_cell_types: cell_type_multifeature_combo
+    synapses: synapses_pni_2
+    synapse_target_structure: synapse_target_structure
+
+functional:
+  identity_source: cave_manual_coregistration
+  trace_acquisition_status: deferred_post_sonata
+  planned_trace_source: MICrONS NDA v8
+  require_trace_for_selection: false
+  preserve_all_manual_mappings: true
+  historical_dandi_audit:
+    dandiset_id: "000402"
+    version: "0.230307.2132"
+
+eligibility:
+  functional_area: V1
+  cell_class: excitatory_neuron
+  proofreading:
+    require_axon: true
+    require_dendrite: true
+    allowed_axon_strategies:
+      - axon_fully_extended
+    allowed_dendrite_strategies:
+      - dendrite_extended
+  skeleton:
+    required_roots: 1
+    require_soma: true
+    require_axon: true
+    require_dendrite: true
+    require_apical: false
+    require_finite_radii: true
+    require_positive_radii: false
+    allowed_types: [1, 2, 3, 4]
+
+recording_selection:
+  minimum_candidates: 20
+  ranking:
+    - largest_weak_component
+    - n_connected_directed_pairs
+    - n_synaptic_contacts
+  descending: true
+  deterministic_tie_breakers:
+    - session
+    - scan_idx
+
+selection:
+  n_neurons: 20
+  model_id_start: 0
+  model_id_sort_keys:
+    - nucleus_id
+  primary_objective: connected_directed_pairs
+  secondary_objective: individual_synaptic_contacts
+
+morphology:
+  output_format: swc
+  preserve_types: [1, 2, 3, 4]
+  recenter_soma: false
+  preserve_coordinates: true
+  preserve_positive_radii: true
+  radius_normalization:
+    enabled: true
+    scope: nonpositive_points_only
+    rule: topology_harmonic_interpolation_from_positive_neighbors
+    preserve_raw_swc: true
+
+synapses:
+  remove_autapses: true
+  include_zero_roots: false
+  mapping_method: cave_skeleton_v4_level2
+  require_exact_level2_mapping: true
+  preserve_one_row_per_synapse: true
+  incoming_external:
+    include_positive_presynaptic_roots: true
+  outgoing_external:
+    save_as_metadata: true
+
+sonata:
+  selected_population: microns20
+  external_population: external_observed
+  include_observed_external_inputs: true
+  include_external_outputs_as_metadata: true
+  model_type: biophysical
+  morphology_recenter: false
+  edge_dynamics_status: unspecified
+  emit_simulation_config: false
+
+paths:
+  raw: data/raw
+  raw_cave: data/raw/cave
+  raw_dandi: data/raw/dandi
+  interim: data/interim
+  processed: data/processed
+  results: results
+  provenance: provenance
+  candidates: data/interim/candidates
+  recordings: data/interim/recordings
+  selection: data/interim/selection
+  functional: data/interim/functional
+  morphologies: data/interim/morphologies
+  synapses: data/interim/synapses
+  processed_functional: data/processed/functional
+  processed_morphologies: data/processed/morphologies
+  processed_connectivity: data/processed/connectivity
+  processed_sonata: data/processed/sonata
+  results_tables: results/tables
+  results_figures: results/figures
+  results_sonata: results/sonata
+  provenance_stages: provenance/stages
+  provenance_builds: provenance/builds

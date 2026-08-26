@@ -1,0 +1,37 @@
+# Proof-of-concept parameter-transfer experiment.
+#
+# The morphology is a processed CAVE-derived MICrONS morphology.
+# The membrane parameters and mechanisms come from Allen neuronal model
+# 487245719 and have NOT been fitted to this MICrONS neuron.
+#
+# The custom model processor intentionally preserves the CAVE axon and the
+# full processed morphology.
+
+microns_single_cell:
+  model_node_id: 0
+
+  final_manifest: data/processed/final20_manifest.parquet
+  morphology_manifest: data/processed/morphologies/manifest.parquet
+
+  allen_source_dir: data/external/allen_cell_types/487245719
+  dynamics_file: fit_parameters.json
+
+  run_dir: runs/microns_single_cell_model_00
+  population_name: microns_single_cell
+
+  model_template: ctdb:Biophys1.hoc
+  model_processing: microns_perisomatic_preserve_morphology
+
+simulation:
+  tstop_ms: 1000.0
+  dt_ms: 0.1
+  dL_um: 20.0
+  spike_threshold_mv: -15.0
+
+  report_vars:
+    - v
+
+  current_clamp:
+    amp_na: 0.20
+    delay_ms: 200.0
+    duration_ms: 500.0

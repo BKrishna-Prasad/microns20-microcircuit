@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local environments
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Credentials and local secrets
+secrets/
+.secret/
+*.pem
+*.key
+
+# Python build metadata
+build/
+dist/
+*.egg-info/
+
+# Compiled NEURON mechanisms and platform-specific build products
+x86_64/
+arm64/
+*.so
+*.dll
+nrnmech.dll
+
+# Downloaded/source data and regenerable intermediate artifacts
+data/raw/
+data/interim/
+
+# Third-party models are kept locally and retrieved separately
+data/external/
+
+# Generated BioNet/NEURON simulation runs
+runs/*
+!runs/README.md
+
+# Historical development material not intended for the public repository
+provenance/legacy/
+provenance/historical/
+provenance/MIGRATION_REPORT.md
+provenance/MIGRATION_REPORT.md.orig
+provenance/cleanup_inventory.json
+
+# Temporary/export files
+*.orig
+*.bak
+*.tmp
+*.log
+environment_raw.yml

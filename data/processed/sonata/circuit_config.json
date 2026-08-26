@@ -1,0 +1,32 @@
+{
+  "components": {
+    "morphologies_dir": "$COMPONENT_DIR/morphologies"
+  },
+  "manifest": {
+    "$BASE_DIR": ".",
+    "$COMPONENT_DIR": "$BASE_DIR/components",
+    "$NETWORK_DIR": "$BASE_DIR/network"
+  },
+  "networks": {
+    "edges": [
+      {
+        "edge_types_file": "$NETWORK_DIR/edges/microns20_to_microns20_edge_types.csv",
+        "edges_file": "$NETWORK_DIR/edges/microns20_to_microns20_edges.h5"
+      },
+      {
+        "edge_types_file": "$NETWORK_DIR/edges/external_observed_to_microns20_edge_types.csv",
+        "edges_file": "$NETWORK_DIR/edges/external_observed_to_microns20_edges.h5"
+      }
+    ],
+    "nodes": [
+      {
+        "node_types_file": "$NETWORK_DIR/nodes/microns20_node_types.csv",
+        "nodes_file": "$NETWORK_DIR/nodes/microns20_nodes.h5"
+      },
+      {
+        "node_types_file": "$NETWORK_DIR/nodes/external_observed_node_types.csv",
+        "nodes_file": "$NETWORK_DIR/nodes/external_observed_nodes.h5"
+      }
+    ]
+  }
+}

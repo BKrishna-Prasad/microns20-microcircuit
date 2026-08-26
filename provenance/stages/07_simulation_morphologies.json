@@ -1,0 +1,404 @@
+{
+  "config_sha256": "9cf9b6041d7c23811ff6edc1bac29f7c95addccab12fef305fe1514d9b948396",
+  "generated_utc": "2026-08-25T14:19:21.933654+00:00",
+  "inputs": [
+    {
+      "columns": [
+        "model_node_id",
+        "nucleus_id",
+        "pt_root_id",
+        "pt_supervoxel_id",
+        "session",
+        "scan_idx",
+        "n_functional_mappings",
+        "cell_class",
+        "broad_cell_type",
+        "microns_mtype",
+        "functional_area",
+        "status_axon",
+        "strategy_axon",
+        "status_dendrite",
+        "strategy_dendrite",
+        "biologically_eligible",
+        "skeleton_retrieved",
+        "skeleton_error",
+        "cave_skeleton_file",
+        "cave_skeleton_source",
+        "cave_skeleton_sha256",
+        "n_skeleton_points",
+        "n_roots",
+        "root_point_id",
+        "root_type",
+        "n_soma_points",
+        "n_axon_points",
+        "n_basal_or_generic_dendrite_points",
+        "n_apical_points",
+        "n_dendrite_points",
+        "apical_annotation_present",
+        "n_unknown_points",
+        "finite_coordinates",
+        "finite_radii",
+        "positive_radii",
+        "has_nonpositive_radius",
+        "n_nonpositive_radius_points",
+        "requires_radius_normalization",
+        "n_nonfinite_radii",
+        "unique_point_ids",
+        "valid_parent_references",
+        "missing_parent_ids",
+        "self_parent_point_ids",
+        "acyclic",
+        "connected",
+        "allowed_types",
+        "morphio_loadable",
+        "morphio_error",
+        "bmtk_neuron_loadable",
+        "bmtk_neuron_error",
+        "cave_morphology_eligible",
+        "soma_x_um",
+        "soma_y_um",
+        "soma_z_um",
+        "skeleton_file",
+        "skeleton_version",
+        "functional_mapping_complete",
+        "functional_trace_acquisition_deferred"
+      ],
+      "logical_sha256": "64bccc6bdbdd01bdcbaf69550bd09e216d72a3b980126abd148fa599e0eb2188",
+      "path": "data/processed/final20_manifest.parquet",
+      "rows": 20,
+      "sha256": "72d1fecca351d5013eb6db43e81e162138cb3665660250f408ddf5442b9cf1d8",
+      "size_bytes": 39110
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691136275332030.swc",
+      "sha256": "3a31a590523ec13886ed556097ca74a0b1e7917d8a10c2f982522d573dd7551f",
+      "size_bytes": 239417
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691135563052513.swc",
+      "sha256": "a04ad11715918e4eeebf466e7e8053cdd1eaf3422fbf1f8594b165d71d2d61cf",
+      "size_bytes": 273737
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691136043283030.swc",
+      "sha256": "951f52ef73af2aff8276d6813466407d87e7371ef052a9df26df6c091b599096",
+      "size_bytes": 337860
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691135375888840.swc",
+      "sha256": "1cc7dd6469de39ef19cc85d06ed3df719372131f258a9216ad9ed8afa85c25c4",
+      "size_bytes": 201970
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691136336274867.swc",
+      "sha256": "7a0c639fc16fe165d626e16a6d09d9a1be43d8088f9e52778b160b21e8e82f2d",
+      "size_bytes": 211595
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691137022275182.swc",
+      "sha256": "97021463e84a19d2db1ca597fe98b6a0200bb8a9ceca3ea3bb9e7d6b0903e538",
+      "size_bytes": 371814
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691135375895752.swc",
+      "sha256": "d45e7a5795e7c064eb2f309bfef151b4d07b6edb30a61280e7fee4ffbf08ff9f",
+      "size_bytes": 174018
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691135783322704.swc",
+      "sha256": "e1b1027ce844d59513a04ac84f906038fb2c1dfddd2f4a20be40563ef7adf420",
+      "size_bytes": 137731
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691135294441654.swc",
+      "sha256": "531ad17dc0a2d31c0d1d5fc5f76807dbb51ee72bc43fcd207f8f3e7812a27539",
+      "size_bytes": 163030
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691135369693945.swc",
+      "sha256": "ec4de76ee398f3a83e14b794a8d9f3d27b12a2ce49efde94ed304f835c639747",
+      "size_bytes": 197017
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691136196418518.swc",
+      "sha256": "6f9982fa3ae833717e39d0dca14541382e8d14a7cd00168244e9b3a622fa6fc9",
+      "size_bytes": 173227
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691135563017953.swc",
+      "sha256": "8fa89c45b3a18207f11d930b5166065a3052095d31579f4ba5dc70c3c4a84fbf",
+      "size_bytes": 180326
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691135343752901.swc",
+      "sha256": "13ac730297dfac9e5f4beee44f69530840ecf6285fff5f9703ce12d8532d114e",
+      "size_bytes": 211738
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691135385310443.swc",
+      "sha256": "c973b8514c1915ee7e442b4c0ec15d4215ffc4f75cfd2c0bc89217d0e6d1ed64",
+      "size_bytes": 364858
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691136239902780.swc",
+      "sha256": "5b34b6699772ddd06b51cdf6d7aca712dee4fd5e6b4cbec8cd0912d45478e823",
+      "size_bytes": 149081
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691135646928111.swc",
+      "sha256": "739baa5a62219a3ae6844f5e0f32ea643dcefcf92c13b9fe0e75d67315f97e61",
+      "size_bytes": 152629
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691135361231448.swc",
+      "sha256": "7c5a18380ce457a19a8cbbcd609355aecf886d53c02ecc1b5bc435353f21c84d",
+      "size_bytes": 221007
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691135577816862.swc",
+      "sha256": "d353b592fefeea670343dcd6e38890f526744f2b349da544c17a293d4932c160",
+      "size_bytes": 217451
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691135892355977.swc",
+      "sha256": "3c41d9b3e99163dc8783d32efeebc20113b8d62c67fdaf60cc2f19807b8f0b21",
+      "size_bytes": 238268
+    },
+    {
+      "path": "data/raw/cave/minnie65_public/materialization_1822/skeletons/skeleton_v4/root_864691135481148614.swc",
+      "sha256": "548e341f8952e1cacb4208e754111e6a7a69e95509f4b975039a5bdaa21ea7c5",
+      "size_bytes": 403629
+    }
+  ],
+  "outputs": [
+    {
+      "columns": [
+        "model_node_id",
+        "nucleus_id",
+        "pt_root_id",
+        "source_cave_skeleton",
+        "simulation_morphology",
+        "sha256"
+      ],
+      "logical_sha256": "e1b4365ef9f831b48070b2ba3d19550096d604761c0e99a4250a67fdf4b07db0",
+      "path": "data/processed/morphologies/manifest.parquet",
+      "rows": 20,
+      "sha256": "1403c5bbd9effbed204ac605ac1939fae656cd3016234654120ab17c6b5c9bd2",
+      "size_bytes": 7753
+    },
+    {
+      "columns": [
+        "model_node_id",
+        "nucleus_id",
+        "pt_root_id",
+        "simulation_morphology",
+        "raw_tree_path_length_um",
+        "simulation_tree_path_length_um",
+        "n_radius_normalized_points",
+        "n_skeleton_points",
+        "n_roots",
+        "root_point_id",
+        "root_type",
+        "n_soma_points",
+        "n_axon_points",
+        "n_basal_or_generic_dendrite_points",
+        "n_apical_points",
+        "n_dendrite_points",
+        "apical_annotation_present",
+        "n_unknown_points",
+        "finite_coordinates",
+        "finite_radii",
+        "positive_radii",
+        "has_nonpositive_radius",
+        "n_nonpositive_radius_points",
+        "requires_radius_normalization",
+        "n_nonfinite_radii",
+        "unique_point_ids",
+        "valid_parent_references",
+        "missing_parent_ids",
+        "self_parent_point_ids",
+        "acyclic",
+        "connected",
+        "allowed_types",
+        "morphio_loadable",
+        "morphio_error",
+        "bmtk_neuron_loadable",
+        "bmtk_neuron_error",
+        "root_is_soma",
+        "simulation_morphology_valid"
+      ],
+      "logical_sha256": "2982d587a7197b6fdd634e84f69f10eb09074d256a47ad0ed063a2cdbe5c59d4",
+      "path": "results/tables/simulation_morphology_qc.parquet",
+      "rows": 20,
+      "sha256": "75d438d91cce5c6721e0332c2a6add6334f994305224937d28b91c034b562c0f",
+      "size_bytes": 25109
+    },
+    {
+      "columns": [
+        "model_node_id",
+        "pt_root_id",
+        "raw_point_id",
+        "simulation_point_id"
+      ],
+      "logical_sha256": "8933b437a8c5bbb968ad8c6a4fe7e9cba749a71e17b8d31fc4c7e70294d3bc00",
+      "path": "data/interim/morphologies/cave_to_simulation_point_map.parquet",
+      "rows": 107021,
+      "sha256": "ec5646b9d36c777a54ba980a8f354d6182a4503606907bd4957a4e1b80092885",
+      "size_bytes": 445452
+    },
+    {
+      "columns": [
+        "model_node_id",
+        "pt_root_id",
+        "parent_point_id",
+        "child_point_id",
+        "parent_type",
+        "child_type",
+        "parent_compartment",
+        "child_compartment"
+      ],
+      "logical_sha256": "556ab2853ddb96a8ab25b2273558202def8d25fb48e9a9c1fc081d12736f9105",
+      "path": "results/tables/compartment_transition_events.parquet",
+      "rows": 148,
+      "sha256": "8fad0dac26c30d3c086889687f1cee49d14f3b4d24dde8b56b5064bb24da2f92",
+      "size_bytes": 6593
+    },
+    {
+      "columns": [
+        "model_node_id",
+        "pt_root_id",
+        "raw_point_id",
+        "raw_radius_um",
+        "normalized_radius_um",
+        "nonpositive_component_size",
+        "positive_boundary_point_ids",
+        "positive_boundary_radii_um",
+        "normalization_rule"
+      ],
+      "logical_sha256": "12e83c20291f390155e9406f45e904a944f8a61ef3f5e5a63459dc87e0a1b7b4",
+      "path": "results/tables/radius_normalization_events.parquet",
+      "rows": 4,
+      "sha256": "0c943ca88928aa18cedf3def0875cea53892e4452581f529020e1a9e4e4fa6b3",
+      "size_bytes": 7062
+    },
+    {
+      "path": "data/processed/morphologies/model_000_nucleus_260303_root_864691136275332030.swc",
+      "sha256": "a66dce742d63699e770280c2c248b015671a74725dcffad48d86a572524252ce",
+      "size_bytes": 470622
+    },
+    {
+      "path": "data/processed/morphologies/model_001_nucleus_260621_root_864691135563052513.swc",
+      "sha256": "8d4d2d7500b375f7e8a8c14ce4610ce165949f95ca720c4df0ba891394ccb2b3",
+      "size_bytes": 548769
+    },
+    {
+      "path": "data/processed/morphologies/model_002_nucleus_260625_root_864691136043283030.swc",
+      "sha256": "0a3b695f93730d9a30dd24accaef6953e343fe6ed59f9f4248a0ad2417a09c24",
+      "size_bytes": 337874
+    },
+    {
+      "path": "data/processed/morphologies/model_003_nucleus_260628_root_864691135375888840.swc",
+      "sha256": "f59e55b86775c77ded23d0e1bdfd9024d1600d5cdc54248beee5763ca2cee6fc",
+      "size_bytes": 388959
+    },
+    {
+      "path": "data/processed/morphologies/model_004_nucleus_260648_root_864691136336274867.swc",
+      "sha256": "f187ed75860b63e9ae209441694bf8a3352a02e1fbab7fd81ecdbe7019a79acc",
+      "size_bytes": 412711
+    },
+    {
+      "path": "data/processed/morphologies/model_005_nucleus_260689_root_864691137022275182.swc",
+      "sha256": "e585e3e6d96a5fcf7d491f5da6366e83cceff47a3654ea44c9ff25a12dcbfefc",
+      "size_bytes": 371820
+    },
+    {
+      "path": "data/processed/morphologies/model_006_nucleus_262547_root_864691135375895752.swc",
+      "sha256": "d69ac3265f45ff1e89e1202efcb710e125768395feadda611f217501014d3a74",
+      "size_bytes": 332369
+    },
+    {
+      "path": "data/processed/morphologies/model_007_nucleus_262654_root_864691135783322704.swc",
+      "sha256": "acee21c4609112dfc09b0fce6a580a7afc5c2c95daf08931e37bd9e61deeb572",
+      "size_bytes": 270325
+    },
+    {
+      "path": "data/processed/morphologies/model_008_nucleus_262698_root_864691135294441654.swc",
+      "sha256": "b524276f0a09ce352b6f40041288b69b730a92ccaa3bf0601a90e0423c369a9f",
+      "size_bytes": 329502
+    },
+    {
+      "path": "data/processed/morphologies/model_009_nucleus_262810_root_864691135369693945.swc",
+      "sha256": "3744707c5db0f43e48aeee29c258ebc2f8f0da1d2051200ff984e80343e978d6",
+      "size_bytes": 393680
+    },
+    {
+      "path": "data/processed/morphologies/model_010_nucleus_262892_root_864691136196418518.swc",
+      "sha256": "d223fc21b4ddc518374abafeb8c4bd2b93667b259a7ceb9c8b3203de55d957c1",
+      "size_bytes": 345740
+    },
+    {
+      "path": "data/processed/morphologies/model_011_nucleus_262893_root_864691135563017953.swc",
+      "sha256": "2662d1b579cccf063299426244da3fdca4541f301d9980a12a6999c73041903e",
+      "size_bytes": 340897
+    },
+    {
+      "path": "data/processed/morphologies/model_012_nucleus_296508_root_864691135343752901.swc",
+      "sha256": "e13d32eddddcf461d947657072e486de0ca7e47f94d29cf429994131b8695fd6",
+      "size_bytes": 411637
+    },
+    {
+      "path": "data/processed/morphologies/model_013_nucleus_296513_root_864691135385310443.swc",
+      "sha256": "2d52c7a40f4f9156075d1ad4f8a471962bea717b92da450a189306448f410fe3",
+      "size_bytes": 720978
+    },
+    {
+      "path": "data/processed/morphologies/model_014_nucleus_296680_root_864691136239902780.swc",
+      "sha256": "7788c6b5ccaf8ac4e9cf1aee0745cb28438ed0e91a4e48b0f746edd3a67e5608",
+      "size_bytes": 298867
+    },
+    {
+      "path": "data/processed/morphologies/model_015_nucleus_296750_root_864691135646928111.swc",
+      "sha256": "53fa2ea50304a8aeef3c9034b9621164622bddfa40552a31d0770fd47b1029e2",
+      "size_bytes": 301184
+    },
+    {
+      "path": "data/processed/morphologies/model_016_nucleus_296779_root_864691135361231448.swc",
+      "sha256": "83dc01ad7a5227a91a5f9aa346d5323326c1b97c63349bfa861212485253afcd",
+      "size_bytes": 433475
+    },
+    {
+      "path": "data/processed/morphologies/model_017_nucleus_298916_root_864691135577816862.swc",
+      "sha256": "a539964ac2589a93e8fa97eed967e40f37ad414a7b637dd5e18c789256fdc344",
+      "size_bytes": 431646
+    },
+    {
+      "path": "data/processed/morphologies/model_018_nucleus_299060_root_864691135892355977.swc",
+      "sha256": "e895b63ffb33797799fecfbcf0a9123f56fae41b2387508b7ab9a2fe99e25469",
+      "size_bytes": 448586
+    },
+    {
+      "path": "data/processed/morphologies/model_019_nucleus_299068_root_864691135481148614.swc",
+      "sha256": "57d65db0de1838ddf33b23ebfb33d0671d4bf9bae637a3c2ba4e58502ffcfbba",
+      "size_bytes": 785036
+    }
+  ],
+  "source_metadata": {
+    "coordinate_space": "MICrONS CAVE skeleton",
+    "coordinate_unit": "micrometre",
+    "materialization_version": 1822,
+    "skeleton_version": 4,
+    "source": "CAVE skeleton service SWC"
+  },
+  "stage": "07_simulation_morphologies",
+  "status": "complete",
+  "summaries": {
+    "compartment_types_changed": false,
+    "coordinates_changed": false,
+    "n_radius_normalized_neurons": 3,
+    "n_radius_normalized_points": 4,
+    "n_simulation_morphologies": 20,
+    "n_valid_simulation_morphologies": 20,
+    "radius_normalization_rule": "topology_harmonic_interpolation_from_positive_neighbors",
+    "topology_changed_except_identifier_normalization": false
+  }
+}

@@ -1,0 +1,347 @@
+{
+  "config_sha256": "9cf9b6041d7c23811ff6edc1bac29f7c95addccab12fef305fe1514d9b948396",
+  "generated_utc": "2026-08-25T14:17:19.727686+00:00",
+  "inputs": [
+    {
+      "columns": [
+        "id_ref",
+        "created_ref",
+        "valid_ref",
+        "volume",
+        "pt_supervoxel_id",
+        "pt_root_id",
+        "id",
+        "created",
+        "valid",
+        "target_id",
+        "session",
+        "scan_idx",
+        "unit_id",
+        "field",
+        "residual",
+        "score",
+        "pt_position",
+        "bb_start_position",
+        "bb_end_position"
+      ],
+      "logical_sha256": "46c51fedee10764c5705f709edceedb5beffd41373ab5e4378efd1577bea0a83",
+      "path": "data/raw/cave/minnie65_public/materialization_1822/tables/coregistration_manual_v4.parquet",
+      "rows": 19181,
+      "sha256": "748ad445ca6f27058a66386b96b27ee9b1efdae85fabd1667f73a0d710b9bb3c",
+      "size_bytes": 1524941
+    },
+    {
+      "columns": [
+        "id",
+        "created",
+        "tag",
+        "valid",
+        "target_id",
+        "value",
+        "id_ref",
+        "created_ref",
+        "valid_ref",
+        "volume",
+        "pt_supervoxel_id",
+        "pt_root_id",
+        "pt_position",
+        "bb_start_position",
+        "bb_end_position"
+      ],
+      "logical_sha256": "374c34845419320685b35c2f35e502cdad0d716d25efc8f6f6e566379d207774",
+      "path": "data/raw/cave/minnie65_public/materialization_1822/tables/nucleus_functional_area_assignment.parquet",
+      "rows": 144120,
+      "sha256": "15dcc254f864b729f4e96a849c3a74f240a03bb4dcfeb0d938013399ab57dd39",
+      "size_bytes": 10052300
+    },
+    {
+      "columns": [
+        "id",
+        "created",
+        "superceded_id",
+        "valid",
+        "valid_id",
+        "status_dendrite",
+        "status_axon",
+        "strategy_dendrite",
+        "strategy_axon",
+        "pt_supervoxel_id",
+        "pt_root_id",
+        "pt_position"
+      ],
+      "logical_sha256": "e383344ae2ea789cb90dd631f934689175b8f7da39b922fbbd500ff46d238a25",
+      "path": "data/raw/cave/minnie65_public/materialization_1822/tables/proofreading_status_and_strategy.parquet",
+      "rows": 2334,
+      "sha256": "bd722960dbbd9b3c4bcb772924054d48591798c5881e8f895ad7866835d74a32",
+      "size_bytes": 145647
+    },
+    {
+      "columns": [
+        "id_ref",
+        "created_ref",
+        "valid_ref",
+        "volume",
+        "pt_supervoxel_id",
+        "pt_root_id",
+        "id",
+        "created",
+        "valid",
+        "target_id",
+        "classification_system",
+        "cell_type",
+        "pt_position",
+        "bb_start_position",
+        "bb_end_position"
+      ],
+      "logical_sha256": "e3462d344ff9bd25bbc703687b0579d611ce52bf4a75b8798176a9b5f589e67f",
+      "path": "data/raw/cave/minnie65_public/materialization_1822/tables/aibs_metamodel_celltypes_v661.parquet",
+      "rows": 94014,
+      "sha256": "f3fecd360f0e98515b21901dc46c5cfb1641d957372d68f235f710c37c398465",
+      "size_bytes": 6405676
+    },
+    {
+      "columns": [
+        "id",
+        "created",
+        "valid",
+        "target_id",
+        "classification_system",
+        "cell_type",
+        "id_ref",
+        "created_ref",
+        "valid_ref",
+        "volume",
+        "pt_supervoxel_id",
+        "pt_root_id",
+        "pt_position",
+        "bb_start_position",
+        "bb_end_position"
+      ],
+      "logical_sha256": "7b594224ea3c17f9439ac884987c804e0b8e33386e676964f39c055b2cfa4cc4",
+      "path": "data/raw/cave/minnie65_public/materialization_1822/tables/aibs_metamodel_celltypes_v661_corrections.parquet",
+      "rows": 347,
+      "sha256": "528748b02727a7a1fbc4f1ae9a2e8284b1fa8f7ae96376cc8d6ee7ed2b6c26cf",
+      "size_bytes": 52769
+    },
+    {
+      "columns": [
+        "id",
+        "created",
+        "valid",
+        "target_id",
+        "classification_system",
+        "cell_type",
+        "id_ref",
+        "created_ref",
+        "valid_ref",
+        "volume",
+        "pt_supervoxel_id",
+        "pt_root_id",
+        "pt_position",
+        "bb_start_position",
+        "bb_end_position"
+      ],
+      "logical_sha256": "a421970934abbe0f394fcfa18874da80147883ed54409cbeddfae905087557f2",
+      "path": "data/raw/cave/minnie65_public/materialization_1822/tables/aibs_metamodel_mtypes_v661_v2.parquet",
+      "rows": 72158,
+      "sha256": "1179a895021b711d1cd0e30b43321faf025078c127815bedb5ab31c9a1cb2390",
+      "size_bytes": 4879652
+    },
+    {
+      "columns": [
+        "id",
+        "created",
+        "valid",
+        "target_id",
+        "classification_system",
+        "cell_type",
+        "id_ref",
+        "created_ref",
+        "valid_ref",
+        "volume",
+        "pt_supervoxel_id",
+        "pt_root_id",
+        "pt_position",
+        "bb_start_position",
+        "bb_end_position"
+      ],
+      "logical_sha256": "ec19c184b9dcd6b0e8613c5f407361b483581f7df818344f8381ed797a1db02c",
+      "path": "data/raw/cave/minnie65_public/materialization_1822/tables/aibs_metamodel_mtypes_v661_v2_corrections.parquet",
+      "rows": 15,
+      "sha256": "99d96e1dd57dac68cddfbea2a6fdae60e5af15369253bc455e6c3e53cbf134a2",
+      "size_bytes": 28321
+    }
+  ],
+  "outputs": [
+    {
+      "columns": [
+        "nucleus_id",
+        "pt_root_id",
+        "pt_supervoxel_id",
+        "session",
+        "scan_idx",
+        "unit_id",
+        "field",
+        "coregistration_id",
+        "id_ref",
+        "score",
+        "residual"
+      ],
+      "logical_sha256": "9fb26927c1957174bf4f068133b0e287bfd042170ef2c9a6be134a3edb58b146",
+      "path": "data/interim/candidates/functional_mappings.parquet",
+      "rows": 19175,
+      "sha256": "2a0b805e777857a4fcb0a8d998b170ad67ab0cd51ef39ba7660b9bf2981b901c",
+      "size_bytes": 921980
+    },
+    {
+      "columns": [
+        "nucleus_id",
+        "pt_root_id",
+        "pt_supervoxel_id",
+        "session",
+        "scan_idx",
+        "n_functional_mappings",
+        "cell_class",
+        "broad_cell_type",
+        "microns_mtype",
+        "functional_area",
+        "status_axon",
+        "strategy_axon",
+        "status_dendrite",
+        "strategy_dendrite",
+        "biologically_eligible"
+      ],
+      "logical_sha256": "9d181580229ca70a4c7fb73e095e1483f0d6e63bb2eedf1ac2ffd35be2429506",
+      "path": "data/interim/candidates/biological_candidates.parquet",
+      "rows": 298,
+      "sha256": "85146e3693cc81558524e9adedcc1dd5e766733474dbc8b8a23d5fedb3b3574d",
+      "size_bytes": 15493
+    },
+    {
+      "columns": [
+        "stage",
+        "n_candidate_rows",
+        "n_unique_neurons",
+        "n_recordings"
+      ],
+      "logical_sha256": "8f2f4a8610acd3950a08183f60fe6571c6ff3d979da63f11d905928507d74f1a",
+      "path": "results/tables/candidate_discovery_summary.parquet",
+      "rows": 5,
+      "sha256": "f03f3d7a57a012892cc8886332dd65eb92ccf3b81912d737db44a30b48b12485",
+      "size_bytes": 3229
+    },
+    {
+      "columns": [
+        "nucleus_id",
+        "pt_root_id",
+        "pt_supervoxel_id",
+        "session",
+        "scan_idx",
+        "n_functional_mappings",
+        "cell_class",
+        "broad_cell_type",
+        "microns_mtype",
+        "functional_area",
+        "status_axon",
+        "strategy_axon",
+        "status_dendrite",
+        "strategy_dendrite",
+        "biologically_eligible"
+      ],
+      "logical_sha256": "b08fff331f8b5a909762104529a0303e7498a58f6ce01bd36f93fe75cdf5109f",
+      "path": "results/tables/candidate_discovery_failures.parquet",
+      "rows": 18473,
+      "sha256": "d366812bd2bf58c391be596667468f00442553bfcaccb6ff1c27045be3ad4830",
+      "size_bytes": 418661
+    },
+    {
+      "columns": [
+        "nucleus_id",
+        "pt_root_id",
+        "pt_supervoxel_id",
+        "session",
+        "scan_idx",
+        "unit_id",
+        "field",
+        "coregistration_id",
+        "id_ref",
+        "score",
+        "residual"
+      ],
+      "logical_sha256": "d18cc68f796f9043c101fa0f67f05657b4d0b60e785213d45ebc2ddafd5edf3f",
+      "path": "results/tables/invalid_stable_identities.parquet",
+      "rows": 6,
+      "sha256": "df18a53a77e8fb776f01b3b3fe6403620c13a79729839367fe76d098142e14db",
+      "size_bytes": 26518
+    },
+    {
+      "columns": [
+        "nucleus_id",
+        "session",
+        "scan_idx",
+        "unit_id",
+        "field",
+        "duplicate_kind"
+      ],
+      "logical_sha256": "fc85c8a6dedb66c039d497b625b2f2eaebfc29ef92d1d440d89c37668c1fafac",
+      "path": "results/tables/functional_mapping_duplicates.parquet",
+      "rows": 0,
+      "sha256": "1d4d9dd3035bcf4aa155c648a83b8349c915a3381c48e4f3120e179c9c5ed45b",
+      "size_bytes": 3126
+    }
+  ],
+  "source_metadata": {
+    "datastack": "minnie65_public",
+    "desired_resolution_um": [
+      1000,
+      1000,
+      1000
+    ],
+    "materialization_status": "AVAILABLE",
+    "materialization_timestamp": "2026-06-27T14:05:22.813147+00:00",
+    "materialization_version": 1822,
+    "skeleton_version": 4,
+    "synapse_table": "synapses_pni_2"
+  },
+  "stage": "01_candidate_discovery",
+  "status": "complete",
+  "summaries": {
+    "filter_counts": [
+      {
+        "n_candidate_rows": 18771,
+        "n_recordings": 16,
+        "n_unique_neurons": 15433,
+        "stage": "manual_functional_coregistration"
+      },
+      {
+        "n_candidate_rows": 12883,
+        "n_recordings": 16,
+        "n_unique_neurons": 10505,
+        "stage": "configured_functional_area"
+      },
+      {
+        "n_candidate_rows": 12767,
+        "n_recordings": 16,
+        "n_unique_neurons": 10407,
+        "stage": "configured_cell_class"
+      },
+      {
+        "n_candidate_rows": 1056,
+        "n_recordings": 16,
+        "n_unique_neurons": 857,
+        "stage": "proofreading_status"
+      },
+      {
+        "n_candidate_rows": 298,
+        "n_recordings": 16,
+        "n_unique_neurons": 253,
+        "stage": "proofreading_strategy"
+      }
+    ],
+    "n_biologically_eligible_neurons": 253,
+    "n_biologically_eligible_rows": 298,
+    "n_exact_duplicate_rows": 0,
+    "n_invalid_stable_identity_rows": 6,
+    "n_normalized_functional_mappings": 19175
+  }
+}

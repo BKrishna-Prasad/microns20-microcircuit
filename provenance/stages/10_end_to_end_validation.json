@@ -1,0 +1,451 @@
+{
+  "config_sha256": "9cf9b6041d7c23811ff6edc1bac29f7c95addccab12fef305fe1514d9b948396",
+  "generated_utc": "2026-08-26T11:51:52.194197+00:00",
+  "inputs": [
+    {
+      "columns": [
+        "model_node_id",
+        "nucleus_id",
+        "pt_root_id",
+        "pt_supervoxel_id",
+        "session",
+        "scan_idx",
+        "n_functional_mappings",
+        "cell_class",
+        "broad_cell_type",
+        "microns_mtype",
+        "functional_area",
+        "status_axon",
+        "strategy_axon",
+        "status_dendrite",
+        "strategy_dendrite",
+        "biologically_eligible",
+        "skeleton_retrieved",
+        "skeleton_error",
+        "cave_skeleton_file",
+        "cave_skeleton_source",
+        "cave_skeleton_sha256",
+        "n_skeleton_points",
+        "n_roots",
+        "root_point_id",
+        "root_type",
+        "n_soma_points",
+        "n_axon_points",
+        "n_basal_or_generic_dendrite_points",
+        "n_apical_points",
+        "n_dendrite_points",
+        "apical_annotation_present",
+        "n_unknown_points",
+        "finite_coordinates",
+        "finite_radii",
+        "positive_radii",
+        "has_nonpositive_radius",
+        "n_nonpositive_radius_points",
+        "requires_radius_normalization",
+        "n_nonfinite_radii",
+        "unique_point_ids",
+        "valid_parent_references",
+        "missing_parent_ids",
+        "self_parent_point_ids",
+        "acyclic",
+        "connected",
+        "allowed_types",
+        "morphio_loadable",
+        "morphio_error",
+        "bmtk_neuron_loadable",
+        "bmtk_neuron_error",
+        "cave_morphology_eligible",
+        "soma_x_um",
+        "soma_y_um",
+        "soma_z_um",
+        "skeleton_file",
+        "skeleton_version",
+        "functional_mapping_complete",
+        "functional_trace_acquisition_deferred"
+      ],
+      "logical_sha256": "64bccc6bdbdd01bdcbaf69550bd09e216d72a3b980126abd148fa599e0eb2188",
+      "path": "data/processed/final20_manifest.parquet",
+      "rows": 20,
+      "sha256": "72d1fecca351d5013eb6db43e81e162138cb3665660250f408ddf5442b9cf1d8",
+      "size_bytes": 39110
+    },
+    {
+      "columns": [
+        "model_node_id",
+        "nucleus_id",
+        "pt_root_id",
+        "pt_supervoxel_id",
+        "session",
+        "scan_idx",
+        "unit_id",
+        "field",
+        "coregistration_id",
+        "id_ref",
+        "score",
+        "residual"
+      ],
+      "logical_sha256": "c05c5d99c665586223fba689895b6434f86d39fce906b7e8008090d9bca7c64b",
+      "path": "data/processed/final20_functional_mappings.parquet",
+      "rows": 22,
+      "sha256": "01e5d3ba17f30afa8e2de2e048e37591e22db50cba00429e73ae3f08e97d612a",
+      "size_bytes": 8559
+    },
+    {
+      "columns": [
+        "model_node_id",
+        "nucleus_id",
+        "pt_root_id",
+        "source_cave_skeleton",
+        "simulation_morphology",
+        "sha256"
+      ],
+      "logical_sha256": "e1b4365ef9f831b48070b2ba3d19550096d604761c0e99a4250a67fdf4b07db0",
+      "path": "data/processed/morphologies/manifest.parquet",
+      "rows": 20,
+      "sha256": "1403c5bbd9effbed204ac605ac1939fae656cd3016234654120ab17c6b5c9bd2",
+      "size_bytes": 7753
+    },
+    {
+      "columns": [
+        "external_node_id",
+        "pt_root_id"
+      ],
+      "logical_sha256": "434f108a32aaded3bc473f2bf2442e88b2abca22e917625c2577a82c78b10d65",
+      "path": "data/processed/connectivity/external_presynaptic_nodes.parquet",
+      "rows": 29991,
+      "sha256": "3117934e5389bf604a6a6bff0a55d094eba61dfcc15296237b0402688c33c537",
+      "size_bytes": 380929
+    },
+    {
+      "columns": [
+        "id",
+        "created",
+        "superceded_id",
+        "valid",
+        "size",
+        "pre_pt_supervoxel_id",
+        "pre_pt_root_id",
+        "post_pt_supervoxel_id",
+        "post_pt_root_id",
+        "pre_pt_position",
+        "post_pt_position",
+        "ctr_pt_position",
+        "model_node_id",
+        "target_nucleus_id",
+        "post_pt_level2_id",
+        "cave_skeleton_vertex_id",
+        "raw_cave_point_id",
+        "simulation_point_id",
+        "afferent_section_id",
+        "afferent_section_pos",
+        "afferent_section_type",
+        "afferent_center_x_um",
+        "afferent_center_y_um",
+        "afferent_center_z_um",
+        "synapse_to_section_distance_um",
+        "synapse_to_cave_skeleton_vertex_distance_um",
+        "mapping_method",
+        "mapping_status",
+        "mapping_error"
+      ],
+      "logical_sha256": "a2688edaaf3de7d97d3c1e023f61d552e1fd2cccf73325b2e856ffbb85bb38c7",
+      "path": "data/processed/connectivity/intrinsic_synapses.parquet",
+      "rows": 54,
+      "sha256": "6116d504caa436a82342b40877a9b76d0c9f7d8e7e69345da725f9101a33c200",
+      "size_bytes": 28487
+    },
+    {
+      "columns": [
+        "id",
+        "created",
+        "superceded_id",
+        "valid",
+        "size",
+        "pre_pt_supervoxel_id",
+        "pre_pt_root_id",
+        "post_pt_supervoxel_id",
+        "post_pt_root_id",
+        "pre_pt_position",
+        "post_pt_position",
+        "ctr_pt_position",
+        "model_node_id",
+        "target_nucleus_id",
+        "post_pt_level2_id",
+        "cave_skeleton_vertex_id",
+        "raw_cave_point_id",
+        "simulation_point_id",
+        "afferent_section_id",
+        "afferent_section_pos",
+        "afferent_section_type",
+        "afferent_center_x_um",
+        "afferent_center_y_um",
+        "afferent_center_z_um",
+        "synapse_to_section_distance_um",
+        "synapse_to_cave_skeleton_vertex_distance_um",
+        "mapping_method",
+        "mapping_status",
+        "mapping_error"
+      ],
+      "logical_sha256": "372e1f7c6264ccf68ccefcd9b2a8bf08aef4655483568bd4be489dad1243bf87",
+      "path": "data/processed/connectivity/incoming_external_synapses.parquet",
+      "rows": 44282,
+      "sha256": "37a2ed29c780db2393678c0a75699598b35de0af3f9afc644fb966d1bf869d65",
+      "size_bytes": 5210488
+    },
+    {
+      "path": "data/processed/sonata/structural_readiness.json",
+      "sha256": "982e7efcb11a5f0b0429aa7a0ea9fa98fbc4431e35f7dad5cc2bd13325ad48f8",
+      "size_bytes": 923
+    },
+    {
+      "path": "data/processed/sonata/circuit_config.json",
+      "sha256": "0a2ee0b5d93fa9dd1e61340f6182d4c355738793d38e0742722746805bce6e8a",
+      "size_bytes": 967
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_012_nucleus_296508_root_864691135343752901.swc",
+      "sha256": "e13d32eddddcf461d947657072e486de0ca7e47f94d29cf429994131b8695fd6",
+      "size_bytes": 411637
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_005_nucleus_260689_root_864691137022275182.swc",
+      "sha256": "e585e3e6d96a5fcf7d491f5da6366e83cceff47a3654ea44c9ff25a12dcbfefc",
+      "size_bytes": 371820
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_018_nucleus_299060_root_864691135892355977.swc",
+      "sha256": "e895b63ffb33797799fecfbcf0a9123f56fae41b2387508b7ab9a2fe99e25469",
+      "size_bytes": 448586
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_015_nucleus_296750_root_864691135646928111.swc",
+      "sha256": "53fa2ea50304a8aeef3c9034b9621164622bddfa40552a31d0770fd47b1029e2",
+      "size_bytes": 301184
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_009_nucleus_262810_root_864691135369693945.swc",
+      "sha256": "3744707c5db0f43e48aeee29c258ebc2f8f0da1d2051200ff984e80343e978d6",
+      "size_bytes": 393680
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_007_nucleus_262654_root_864691135783322704.swc",
+      "sha256": "acee21c4609112dfc09b0fce6a580a7afc5c2c95daf08931e37bd9e61deeb572",
+      "size_bytes": 270325
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_014_nucleus_296680_root_864691136239902780.swc",
+      "sha256": "7788c6b5ccaf8ac4e9cf1aee0745cb28438ed0e91a4e48b0f746edd3a67e5608",
+      "size_bytes": 298867
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_002_nucleus_260625_root_864691136043283030.swc",
+      "sha256": "0a3b695f93730d9a30dd24accaef6953e343fe6ed59f9f4248a0ad2417a09c24",
+      "size_bytes": 337874
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_008_nucleus_262698_root_864691135294441654.swc",
+      "sha256": "b524276f0a09ce352b6f40041288b69b730a92ccaa3bf0601a90e0423c369a9f",
+      "size_bytes": 329502
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_016_nucleus_296779_root_864691135361231448.swc",
+      "sha256": "83dc01ad7a5227a91a5f9aa346d5323326c1b97c63349bfa861212485253afcd",
+      "size_bytes": 433475
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_010_nucleus_262892_root_864691136196418518.swc",
+      "sha256": "d223fc21b4ddc518374abafeb8c4bd2b93667b259a7ceb9c8b3203de55d957c1",
+      "size_bytes": 345740
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_004_nucleus_260648_root_864691136336274867.swc",
+      "sha256": "f187ed75860b63e9ae209441694bf8a3352a02e1fbab7fd81ecdbe7019a79acc",
+      "size_bytes": 412711
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_001_nucleus_260621_root_864691135563052513.swc",
+      "sha256": "8d4d2d7500b375f7e8a8c14ce4610ce165949f95ca720c4df0ba891394ccb2b3",
+      "size_bytes": 548769
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_017_nucleus_298916_root_864691135577816862.swc",
+      "sha256": "a539964ac2589a93e8fa97eed967e40f37ad414a7b637dd5e18c789256fdc344",
+      "size_bytes": 431646
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_013_nucleus_296513_root_864691135385310443.swc",
+      "sha256": "2d52c7a40f4f9156075d1ad4f8a471962bea717b92da450a189306448f410fe3",
+      "size_bytes": 720978
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_011_nucleus_262893_root_864691135563017953.swc",
+      "sha256": "2662d1b579cccf063299426244da3fdca4541f301d9980a12a6999c73041903e",
+      "size_bytes": 340897
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_000_nucleus_260303_root_864691136275332030.swc",
+      "sha256": "a66dce742d63699e770280c2c248b015671a74725dcffad48d86a572524252ce",
+      "size_bytes": 470622
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_006_nucleus_262547_root_864691135375895752.swc",
+      "sha256": "d69ac3265f45ff1e89e1202efcb710e125768395feadda611f217501014d3a74",
+      "size_bytes": 332369
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_019_nucleus_299068_root_864691135481148614.swc",
+      "sha256": "57d65db0de1838ddf33b23ebfb33d0671d4bf9bae637a3c2ba4e58502ffcfbba",
+      "size_bytes": 785036
+    },
+    {
+      "path": "data/processed/sonata/components/morphologies/model_003_nucleus_260628_root_864691135375888840.swc",
+      "sha256": "f59e55b86775c77ded23d0e1bdfd9024d1600d5cdc54248beee5763ca2cee6fc",
+      "size_bytes": 388959
+    },
+    {
+      "columns": [
+        "node_type_id",
+        "population",
+        "model_type",
+        "scientific_status"
+      ],
+      "logical_sha256": "f34cc2ad2284146401f46ee3fe4001bc37727d6fb324b7893f0eaaf66ed7b1fe",
+      "path": "data/processed/sonata/network/nodes/external_observed_node_types.csv",
+      "rows": 1,
+      "sha256": "80cd8958d543e9e8db34c5f5d7172bb10a8f016092213651723305420480ccf9",
+      "size_bytes": 117
+    },
+    {
+      "path": "data/processed/sonata/network/nodes/external_observed_nodes.h5",
+      "sha256": "2828edf1a82f11863ae94130ec854d1aa1b3be4316878711503600741d915d75",
+      "size_bytes": 1327164
+    },
+    {
+      "path": "data/processed/sonata/network/nodes/microns20_nodes.h5",
+      "sha256": "fc598e1bc9cb2ad6ac46a39e819590afae1f18e860259324a5fb8e7722639854",
+      "size_bytes": 16080
+    },
+    {
+      "columns": [
+        "node_type_id",
+        "population",
+        "model_type",
+        "recenter",
+        "scientific_status"
+      ],
+      "logical_sha256": "9e7d4631e8a24b2076a57445986be2e3c78d59aae75dca9d8d8ea83f829d847f",
+      "path": "data/processed/sonata/network/nodes/microns20_node_types.csv",
+      "rows": 1,
+      "sha256": "b5bb2444bcc51b7338b3ba7ea37bac99902846aa7815749f612e5690575ba3ef",
+      "size_bytes": 115
+    },
+    {
+      "path": "data/processed/sonata/network/edges/microns20_to_microns20_edges.h5",
+      "sha256": "5c50de6fa65a00f57bf1fb56a55c28627db9b77d03d9904c3efb6faf1c7d95a6",
+      "size_bytes": 27256
+    },
+    {
+      "columns": [
+        "edge_type_id",
+        "population",
+        "scientific_status"
+      ],
+      "logical_sha256": "caa6f9a775c43ab142f45da78b1109ae42754318cbf2a6658a3a8b36fb09cf62",
+      "path": "data/processed/sonata/network/edges/external_observed_to_microns20_edge_types.csv",
+      "rows": 1,
+      "sha256": "bc9e2e8f6438347a1617e74fb5f7d2309b337c0833848e2be35a44361b39d514",
+      "size_bytes": 116
+    },
+    {
+      "columns": [
+        "edge_type_id",
+        "population",
+        "scientific_status"
+      ],
+      "logical_sha256": "5ff983173080ef0bbd1ba659a40059b2caa746f754cb3f50e1492721529b7f99",
+      "path": "data/processed/sonata/network/edges/microns20_to_microns20_edge_types.csv",
+      "rows": 1,
+      "sha256": "36179779d3a1439bf230ba629dac5630940f4511ec9c6d8b5d460440dd55fef5",
+      "size_bytes": 108
+    },
+    {
+      "path": "data/processed/sonata/network/edges/external_observed_to_microns20_edges.h5",
+      "sha256": "6c0a71154896e774187e8286f85161bd8ec5131ac88be314ec5b979f6f31756d",
+      "size_bytes": 6610304
+    }
+  ],
+  "outputs": [
+    {
+      "columns": [
+        "n_frozen_neurons",
+        "n_functional_mappings",
+        "n_multi_mapping_neurons",
+        "n_simulation_morphologies",
+        "n_external_nodes",
+        "n_intrinsic_edges",
+        "n_external_incoming_edges",
+        "functional_mapping_complete",
+        "functional_trace_acquisition_deferred",
+        "structural_sonata_valid",
+        "ready_for_emodel_attachment",
+        "ready_for_functional_validation",
+        "ready_for_biophysical_simulation",
+        "physiology_assigned",
+        "bmtk_config_valid",
+        "libsonata_populations_loadable",
+        "morphio_morphologies_loadable",
+        "bmtk_morphologies_loadable",
+        "identity_preserved",
+        "synapse_identity_preserved",
+        "sonata_node_ids_explicit",
+        "sonata_type_populations_valid",
+        "morphology_recenter_disabled",
+        "selected_population",
+        "external_population"
+      ],
+      "logical_sha256": "ee6c290be8d1969eb641ae384461008eae8898941799d182349c67a092a74c43",
+      "path": "results/tables/end_to_end_structural_validation.parquet",
+      "rows": 1,
+      "sha256": "1898b0eee16005951ccea06a21ff6bfcf83052537eb3efdb0366ea0bdffdc00a",
+      "size_bytes": 16159
+    },
+    {
+      "path": "data/processed/sonata/structural_readiness.json",
+      "sha256": "982e7efcb11a5f0b0429aa7a0ea9fa98fbc4431e35f7dad5cc2bd13325ad48f8",
+      "size_bytes": 923
+    }
+  ],
+  "source_metadata": {
+    "functional_trace_source_status": "deferred_post_sonata",
+    "validator": "independent HDF5, libSONATA, BMTK, MorphIO, and SWC reload"
+  },
+  "stage": "10_end_to_end_validation",
+  "status": "complete",
+  "summaries": {
+    "bmtk_config_valid": true,
+    "bmtk_morphologies_loadable": true,
+    "external_population": "external_observed",
+    "functional_mapping_complete": true,
+    "functional_trace_acquisition_deferred": true,
+    "identity_preserved": true,
+    "libsonata_populations_loadable": true,
+    "morphio_morphologies_loadable": true,
+    "morphology_recenter_disabled": true,
+    "n_external_incoming_edges": 44282,
+    "n_external_nodes": 29991,
+    "n_frozen_neurons": 20,
+    "n_functional_mappings": 22,
+    "n_intrinsic_edges": 54,
+    "n_multi_mapping_neurons": 2,
+    "n_simulation_morphologies": 20,
+    "physiology_assigned": false,
+    "ready_for_biophysical_simulation": false,
+    "ready_for_emodel_attachment": true,
+    "ready_for_functional_validation": false,
+    "selected_population": "microns20",
+    "sonata_node_ids_explicit": true,
+    "sonata_type_populations_valid": true,
+    "structural_sonata_valid": true,
+    "synapse_identity_preserved": true
+  }
+}

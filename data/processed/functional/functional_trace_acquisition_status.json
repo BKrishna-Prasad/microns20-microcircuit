@@ -1,0 +1,11 @@
+{
+  "empty_trace_artifacts_written": false,
+  "functional_identity_source": "cave_manual_coregistration",
+  "n_frozen_neurons": 20,
+  "n_multi_mapping_neurons": 2,
+  "n_preserved_functional_mappings": 22,
+  "note": "CAVE manual coregistration is sufficient functional identity. Raw fluorescence and deconvolved activity will be acquired from MICrONS NDA v8 after structural SONATA construction.",
+  "planned_trace_source": "MICrONS NDA v8",
+  "status": "DEFERRED_POST_SONATA",
+  "structural_selection_gated_by_trace_availability": false
+}

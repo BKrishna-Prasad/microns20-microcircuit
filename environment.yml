@@ -1,0 +1,25 @@
+name: microns20
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.20
+  - pip
+  - pip:
+      - caveclient==8.2.1
+      - pandas==2.3.3
+      - numpy==2.2.6
+      - pyarrow==25.0.1
+      - h5py==3.16.0
+      - PyYAML==6.0.3
+      - scipy==1.15.3
+      - networkx==3.4.2
+      - matplotlib==3.10.9
+      - plotly==6.9.0
+      - morphio==3.5.0
+      - libsonata==0.2.0
+      - bmtk==1.2.0
+      - neuron==8.2.7
+      - bluepysnap==3.0.7
+      - jupyterlab==4.6.3
+      - nbformat==5.11.0
+      - pytest==9.1.1

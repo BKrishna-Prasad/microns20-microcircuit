@@ -1,0 +1,29 @@
+# Provisional reference simulation only.
+# This reproduces the downloaded Allen model with its own morphology and fit.
+# It does not yet use a MICrONS morphology or MICrONS synaptic physiology.
+
+allen_reference:
+  model_id: 487245719
+  source_dir: data/external/allen_cell_types/487245719
+  run_dir: runs/allen_reference_smoke_test
+
+  population_name: allen_reference
+  cell_name: Scnn1a_VISp4_487245719
+
+  model_template: ctdb:Biophys1.hoc
+  model_processing: aibs_perisomatic
+  dynamics_file: fit_parameters.json
+  morphology_file: reconstruction.swc
+
+simulation:
+  tstop_ms: 1000.0
+  dt_ms: 0.1
+  dL_um: 20.0
+  spike_threshold_mv: -15.0
+  report_vars:
+    - v
+
+  current_clamp:
+    amp_na: 0.20
+    delay_ms: 200.0
+    duration_ms: 500.0

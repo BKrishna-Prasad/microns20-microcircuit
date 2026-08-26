@@ -1,0 +1,54 @@
+# Recurrent simulation of the selected 20-neuron MICrONS circuit.
+#
+# The node and intrinsic-edge HDF5 files are copied from the validated
+# structural SONATA package. The 54 anatomical contacts and their mapped
+# section positions are therefore preserved.
+#
+# Cellular physiology:
+#   Allen Cell Types neuronal model 487245719, transferred to each MICrONS
+#   morphology without replacing the CAVE-derived axon. These parameters have
+#   not been fitted to MICrONS electrophysiology.
+#
+# Synaptic physiology:
+#   simple excitatory Exp2Syn parameters used as a reference model. These
+#   parameters are not measurements from the 54 MICrONS contacts.
+#
+# Outside-selected20 inputs are deliberately excluded from this experiment.
+
+microns20_recurrent:
+  n_cells: 20
+
+  structural_sonata_dir: data/processed/sonata
+  final_manifest: data/processed/final20_manifest.parquet
+  morphology_manifest: data/processed/morphologies/manifest.parquet
+  intrinsic_synapses: data/processed/connectivity/intrinsic_synapses.parquet
+
+  allen_source_dir: data/external/allen_cell_types/487245719
+  cell_dynamics_file: fit_parameters.json
+  cell_model_template: ctdb:Biophys1.hoc
+  cell_model_processing: microns_perisomatic_preserve_morphology
+
+  run_dir: runs/microns20_recurrent
+
+  synapse:
+    parameter_file: configs/synapses/exp2syn_exc_exc.json
+    model_template: exp2syn
+    weight_us: 0.001
+    delay_ms: 2.0
+
+simulation:
+  tstop_ms: 1000.0
+  dt_ms: 0.1
+  dL_um: 20.0
+  spike_threshold_mv: -15.0
+
+  report_vars:
+    - v
+
+  source_current:
+    amp_na: 0.60
+    delay_ms: 200.0
+    duration_ms: 300.0
+
+analysis:
+  post_stimulus_window_ms: 200.0

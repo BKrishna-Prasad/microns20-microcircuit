@@ -1,0 +1,43 @@
+# Independent proof-of-concept simulation of all 20 selected MICrONS cells.
+#
+# Structural source:
+#   processed CAVE-derived morphologies for the selected 20-neuron population.
+#
+# Provisional physiology:
+#   Allen Cell Types neuronal model 487245719.
+#   These parameters were not fitted to the MICrONS cells.
+#
+# Experimental purpose:
+#   verify that all 20 morphologies instantiate and simulate under one shared
+#   membrane model before recurrent synapses are enabled.
+
+microns20_independent:
+  n_cells: 20
+
+  final_manifest: data/processed/final20_manifest.parquet
+  morphology_manifest: data/processed/morphologies/manifest.parquet
+
+  allen_source_dir: data/external/allen_cell_types/487245719
+  dynamics_file: fit_parameters.json
+
+  run_dir: runs/microns20_independent_060
+  population_name: microns20_independent
+
+  model_template: ctdb:Biophys1.hoc
+  model_processing: microns_perisomatic_preserve_morphology
+
+  physiology_status: allen_derived_provisional_not_microns_fitted
+
+simulation:
+  tstop_ms: 1000.0
+  dt_ms: 0.1
+  dL_um: 20.0
+  spike_threshold_mv: -15.0
+
+  report_vars:
+    - v
+
+  current_clamp:
+    amp_na: 0.60
+    delay_ms: 200.0
+    duration_ms: 500.0
