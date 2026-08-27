@@ -1,178 +1,121 @@
 # Future work
 
-The current repository reaches a working recurrent simulation, but the main scientific problem is still ahead: replacing provisional physiology and input assumptions with models that can be constrained and tested against the MICrONS functional data.
+The current repository reaches a working 20-cell recurrent simulation, but the main scientific objective is still ahead: replacing provisional physiology and missing-input assumptions with models that can be constrained by MICrONS structure and tested against co-registered in-vivo activity.
 
 ## 1. Retrieve the matched functional activity
 
-The selected population already contains the functional identifiers required to locate the corresponding recordings.
-
-The current plan is to use MICrONS NDA v8 and preserve the exact functional key for every mapping:
+The selected population already preserves the MICrONS functional identifiers needed to recover the corresponding recordings:
 
 ```text
 (session, scan_idx, unit_id)
 ```
 
-Relevant NDA tables include:
+The next step is to retrieve the matched fluorescence and/or deconvolved activity, together with the timing information required to align it to frames and stimuli.
 
-- `ScanUnit` for unit identity within a scan;
-- `Fluorescence` for raw fluorescence;
-- `Activity` for deconvolved activity;
-- timing/scan information needed to align activity to frames and stimuli.
+Two selected neurons currently have multiple functional mappings. These mappings should remain separate until there is a justified rule for combining or selecting them.
 
-Two selected neurons have multiple mappings. Those mappings should remain separate until there is a justified rule for combining or selecting them.
+## 2. Establish a comparable activity representation
 
-The first functional-data deliverable should be a table that proves that every retained mapping can be retrieved and aligned to a time base.
+MICrONS measures calcium activity, whereas NEURON produces membrane voltage and spikes. These signals should not be compared directly.
 
-Suggested location:
+The first practical comparison should use simulated spike activity and MICrONS deconvolved activity after matching the imaging time resolution. If needed, simulated spikes can later be passed through a calcium/indicator observation model and compared in fluorescence space.
 
-```text
-data/processed/functional/
-```
+## 3. Improve cellular and synaptic physiology
 
-This functional stream should not change the structural selection.
+The current 20 cells share one Allen Layer-4 perisomatic parameter set. This is useful for testing the simulation workflow, but it is not a fitted model of the selected MICrONS neurons.
 
-## 2. Establish comparable activity representations
+Future cell models should use stronger electrophysiological constraints, for example through Allen/AIBS model families and morphology-aware optimisation with BluePyOpt/BluePyEModel or compatible OBI workflows.
 
-The observed data are calcium imaging, whereas NEURON produces membrane voltage and spikes.
+The current recurrent `Exp2Syn` model is also deliberately simple. Later simulations should consider biologically supported synaptic conductance distributions, kinetics, delays, short-term dynamics and uncertainty.
 
-Directly fitting ion-channel conductances to calcium traces alone is underdetermined.
+These synaptic parameters describe how a presynaptic event is converted into postsynaptic conductance. They are distinct from the external-input model, which determines the activity arriving from neurons outside the explicitly simulated circuit.
 
-A sensible comparison requires an explicit observation model. Options include:
+## 4. Characterise the missing input
 
-- compare deconvolved MICrONS activity with simulated spike trains after matching temporal resolution;
-- convert simulated spikes through a calcium/indicator response model and compare in fluorescence space;
-- use both representations as complementary checks.
-
-This layer should be explicit so a mismatch is not hidden by preprocessing.
-
-## 3. Replace the shared Allen reference parameters
-
-The current 20 cells all use one Allen Layer-4 perisomatic parameter set.
-
-Future cell models should use stronger biological constraints, for example:
-
-- Allen/AIBS electrophysiology-based model families matched by layer and cell class;
-- BluePyOpt/BluePyEModel optimisation workflows;
-- available OBI/Blue Brain model recipes where compatible;
-- morphology-aware re-optimisation rather than direct transfer of conductances fitted on another morphology.
-
-A key issue is that the MICrONS cells themselves do not provide patch-clamp targets. Therefore the optimisation problem should separate:
-
-```text
-intrinsic electrophysiological priors
-from
-network/activity calibration against calcium imaging
-```
-
-rather than asking calcium data to identify every ion-channel parameter.
-
-## 4. Improve synaptic physiology
-
-The current recurrent `Exp2Syn` model is deliberately simple.
-
-Future work should consider:
-
-- excitatory postsynaptic conductance distributions;
-- connection-specific delays;
-- synapse-size information;
-- short-term plasticity if justified;
-- multiple contacts between the same pre/post pair;
-- dendritic location effects;
-- uncertainty rather than one deterministic conductance value.
-
-The two current axon-target recurrent contacts should also be cross-checked against source target-structure annotations.
-
-## 5. Classify outside-selected20 input
-
-The current circuit observes:
+The selected 20-cell circuit receives:
 
 ```text
 44,282 incoming contacts
-29,991 positive presynaptic roots
+29,991 presynaptic roots outside the selected 20
 ```
 
-from outside the selected 20.
+These sources are structurally observed but are not active in the present recurrent simulation.
 
-These inputs should be separated into biologically meaningful classes where possible, for example:
+"Outside the selected 20" is a model-boundary definition, not a biological definition of extrinsic input. The source population may include local V1 neurons, neurons from other cortical areas, inhibitory and excitatory populations, and incompletely reconstructed cells.
 
-- local V1 neurons outside the explicit 20-cell model;
-- other cortical areas;
-- inhibitory versus excitatory sources where annotations support this;
-- sources with/without soma or cell-type information;
-- longer-range or otherwise incomplete presynaptic reconstructions.
+The first analysis should therefore classify these roots as far as the available MICrONS annotations allow.
 
-This classification is essential because "outside selected 20" is a model-boundary definition, not a biological definition of extrinsic input.
+## 5. Build a baseline external-input model
 
-## 6. Model the external drive
+The initial missing-input model should be deliberately low-dimensional and interpretable.
 
-Once input classes are understood, the main modelling task is to define activity for the sources that are not explicitly simulated as detailed neurons.
+A practical baseline is to provide each selected neuron with fluctuating excitatory and/or inhibitory conductance representing the combined effect of many omitted synapses. The input parameters can be constrained by both:
 
-Possible approaches include:
+- structural information, such as the number and class of incoming contacts;
+- functional information, such as activity level, temporal variability, autocorrelation and shared population fluctuations.
 
-- spike trains derived from measured functional activity when available;
-- population-statistical spike generators;
-- inhomogeneous Poisson or renewal processes as baselines;
-- low-dimensional latent drive shared across source classes;
-- stimulus-conditioned input models;
-- hierarchical models in which external-drive parameters are inferred jointly with network-state parameters.
+This baseline should establish whether a simple stochastic drive can place the circuit in an in-vivo-like operating regime before adding thousands of explicit input sources.
 
-The 44,282 observed incoming synapse locations provide a valuable structural constraint even when the presynaptic dynamics are not directly observed.
+The aim is not only to match mean activity. Different input processes can produce similar mean rates, so the temporal and population structure of the recorded activity should also contribute to calibration.
 
-## 7. Calibrate the network state
+## 6. Refine the input using observed synaptic locations
 
-The present recurrent network has no background drive from the outside-selected20 population.
+If the baseline model is stable and the data justify additional complexity, the observed MICrONS input connectivity can be used more directly.
 
-That means the unstimulated cells begin near their passive/resting state, which is not intended to represent the in-vivo operating point.
+Presynaptic roots outside the explicit 20-cell circuit can be represented as virtual SONATA sources that generate modelled spike trains. Their spikes can activate synaptic mechanisms at the postsynaptic section IDs and positions already mapped from MICrONS.
 
-Future calibration should consider:
+```text
+modelled outside-source activity
+        ↓
+virtual presynaptic source
+        ↓
+observed MICrONS contact(s)
+        ↓
+mapped postsynaptic location
+        ↓
+20-cell biophysical circuit
+```
 
-- baseline firing/activity level;
-- trial-to-trial variability;
-- response reliability;
-- pairwise or population activity relationships;
-- stimulus dependence;
-- calcium-imaging timescale.
+Multiple contacts belonging to the same presynaptic root should share the same presynaptic activity rather than being treated as independent current injections.
 
-The external-input model is likely to be central to reproducing the in-vivo network state.
+This refinement would allow us to test whether the amount, spatial distribution and temporal statistics of missing input each contribute to the observed network state.
 
-## 8. Validate against MICrONS recordings
+## 7. Calibrate and validate against MICrONS activity
 
-Validation should be held out from parameter tuning where possible.
+External-input parameters should be calibrated against the co-registered functional activity of the selected neurons.
 
-Useful targets may include:
+Candidate models can be compared using quantities such as:
 
-- per-cell activity rate;
-- event probability;
-- pairwise functional relationships;
-- population synchrony;
-- response to repeated stimuli;
-- temporal autocorrelation;
-- network-level activity distributions.
+- per-cell activity or event rate;
+- temporal variance and autocorrelation;
+- pairwise activity relationships;
+- population synchrony or shared fluctuations;
+- stimulus-dependent activity where appropriate.
 
-The exact validation targets should be chosen after the NDA activity is inspected.
+Where the recording structure permits it, parameter fitting and validation should be separated. Input parameters can be estimated using one subset of time periods, trials or stimulus epochs and evaluated on held-out activity.
 
-## 9. Expand beyond 20 neurons
+A successful model should therefore reproduce more than a population-average firing rate. It should provide a plausible operating state while remaining consistent with the observed structural amount and location of missing input.
 
-The current 20-cell model is deliberately small enough to inspect and simulate easily.
+## 8. Generalise the workflow
 
-The configuration should make it possible to rerun with:
+Once the 20-cell model and validation strategy are stable, the same workflow can be tested on another simultaneously recorded population or a moderately larger circuit.
 
-- another recording;
-- a different population size;
-- broader proofreading criteria;
-- different cell-class restrictions.
+The intended reusable outcome is the calibration procedure rather than one fixed parameter set:
 
-Scaling should happen after the model and validation strategy is stable, not simply because more neurons are available.
+```text
+MICrONS structure
+        +
+co-registered activity
+        ↓
+external-input calibration
+        ↓
+OBI-compatible simulation
+        ↓
+held-out functional validation
+```
 
-## 10. Software work
+This would make it possible to test whether inferred input statistics generalise across neurons, recordings and larger MICrONS-derived circuits.
 
-Before a stable release:
+## Software development
 
-- consolidate duplicated simulation utilities;
-- isolate BMTK 1.2 compatibility code;
-- add automated simulation-format tests;
-- stop duplicate figure rendering in notebooks;
-- make every documented configuration switch effective in the implementation;
-- remove stale helpers from earlier development;
-- add a reproducible environment specification and CI;
-- keep public outputs small and regenerate large run directories.
+Before a stable release, the simulation code should also be simplified and tested further, including dedicated tests for BMTK compatibility, synapse preservation, input generation and simulation outputs.
