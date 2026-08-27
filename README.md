@@ -119,15 +119,19 @@ pip install -e .
 
 ### 2. Configure MICrONS CAVE access
 
-CAVE authentication must be configured with the official CAVE tooling outside this repository. Authentication tokens are not stored in Git.
+The structural pipeline requires a personal CAVE authentication token.
 
-The structural analysis is controlled by:
+Authentication credentials are kept outside the repository and should not be added to `configs/`, notebooks, source code, or Git history.
+
+For first-time CAVE authentication setup and verification, see:
+
+[`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md)
+
+The scientific data-source and selection settings are stored separately in:
 
 ```text
 configs/project.yaml
 ```
-
-The current configuration pins the MICrONS source version and contains the biological/selection policy used by the pipeline.
 
 ### 3. Run the structural pipeline
 

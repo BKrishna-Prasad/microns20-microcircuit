@@ -30,9 +30,92 @@ The structural notebooks can be executed in order using the repository script:
 python scripts/execute_pipeline_notebooks.py
 ```
 
-## CAVE access
+## CAVE authentication
 
-CAVE authentication should be configured using the official CAVE tooling outside the repository.
+The structural pipeline requires authenticated access to MICrONS through CAVEclient.
+
+A CAVE token must **not** be written into:
+
+```text
+configs/
+notebooks/
+src/
+provenance/
+README.md
+git history
+```
+
+### First-time token setup
+
+Activate the project environment:
+
+```bash
+conda activate microns20
+```
+
+Start Python:
+
+```bash
+python
+```
+
+Then run:
+
+```python
+from getpass import getpass
+
+from caveclient import CAVEclient
+
+client = CAVEclient()
+client.auth.get_new_token(open=True)
+
+token = getpass("Paste your CAVE token: ")
+client.auth.save_token(token=token)
+```
+
+Follow the authentication page or terminal instructions produced by `get_new_token()`, generate the token, and paste it at the prompt.
+
+CAVEclient saves the token by default at:
+
+```text
+~/.cloudvolume/secrets/cave-secret.json
+```
+
+The file is outside the cloned repository and contains the token under the `token` key.
+
+Once saved, future `CAVEclient` instances automatically load this token; the project therefore does not need to pass credentials through configuration files or notebook code.
+
+### Verify authentication
+
+Without displaying the token, run:
+
+```bash
+python -c "from caveclient import CAVEclient; c=CAVEclient(); print('CAVE authentication available:', c.auth.token is not None)"
+```
+
+Expected output:
+
+```text
+CAVE authentication available: True
+```
+
+If authentication has already been configured on the machine, no new token needs to be created.
+
+### Project configuration
+
+Authentication and scientific configuration are separate.
+
+The project's MICrONS datastack, materialisation, skeleton version, biological filtering rules and selection settings are defined in:
+
+```text
+configs/project.yaml
+```
+
+After authentication is configured, the structural pipeline can be run from the repository root with:
+
+```bash
+python scripts/execute_pipeline_notebooks.py
+```
 
 ## Functional NDA access
 

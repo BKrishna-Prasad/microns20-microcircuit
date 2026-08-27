@@ -28,6 +28,11 @@ secrets/
 *.pem
 *.key
 
+# CAVE authentication
+cave-secret.json
+chunkedgraph-secret.json
+.cloudvolume/
+
 # Python build metadata
 build/
 dist/
