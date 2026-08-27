@@ -27,6 +27,12 @@ In the current recurrent experiment, model 13 is chosen automatically from the o
 
 The repository includes a small set of figures intended to make the current result easy to inspect without rerunning the simulations.
 
+### 2D morphology of all 20 neurons
+
+![MICrONS20 2D morphology](results/figures/MICrONS20_2D_morphology.png)
+
+This figure shows the XY projection of all 20 selected CAVE-derived neuron morphologies.
+
 ### Structural microcircuit
 
 ![MICrONS20 structural microcircuit](results/figures/MICrONS20_structural_microcircuit.png)
